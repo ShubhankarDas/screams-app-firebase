@@ -13,7 +13,15 @@ const {
   unlikeScream,
   deleteScream
  } = require('./handlers/screams');
-const { signup, login, uploadImage, addUserDetials, getAuthenticateUser } = require('./handlers/users');
+const { 
+  signup, 
+  login, 
+  uploadImage, 
+  addUserDetials, 
+  getAuthenticateUser,
+  getUserDetails,
+  markNotificationsRead
+} = require('./handlers/users');
 
 // Scream routes
 app.get('/screams', getAllScreams);
@@ -30,6 +38,8 @@ app.post('/login', login);
 app.post('/user/image', FBAuth, uploadImage);
 app.post('/user', FBAuth, addUserDetials);
 app.get('/user', FBAuth, getAuthenticateUser);
+app.get('/user/:handle', getUserDetails)
+app.post('/notifications', FBAuth, markNotificationsRead)
 
 // apis
 exports.api = functions.region('asia-east2').https.onRequest(app);
