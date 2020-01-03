@@ -1,12 +1,4 @@
-const firebaseConfig = {
-  apiKey: "AIzaSyC03P2Fe7SRGbNFscZR-AkmkqV92lVyv1g",
-  authDomain: "social-app-9b5f5.firebaseapp.com",
-  databaseURL: "https://social-app-9b5f5.firebaseio.com",
-  projectId: "social-app-9b5f5",
-  storageBucket: "social-app-9b5f5.appspot.com",
-  messagingSenderId: "572181336894",
-  appId: "1:572181336894:web:a87809ed61420f82af926f"
-};
+const firebaseConfig = require('../config/firebaseConfig.json');
 
 const serviceAccountConfig = {
   "type": "service_account",
