@@ -25,6 +25,14 @@ let db = {
     screamId: 'sadfkgjsd',
     body: 'I like this scream on ice scream',
     createdAt: '2019-12-23T17:25:14.522Z'
+  },
+  notifications: {
+    recipient: 'user',
+    sender: 'Julie',
+    read: 'true | false',
+    screamId: '',
+    type: 'like | comment',
+    createdAt: ''
   }
 }
 
