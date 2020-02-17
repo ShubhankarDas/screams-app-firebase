@@ -34,7 +34,7 @@ exports.postOneScream = (req, res) => {
  };
 
  if (newScream.body.trim() === "") {
-   return res.status(400).json({errors: { body: "Must not be empty" }});
+   return res.status(400).json({ body: "Must not be empty" });
  }
 
  db
